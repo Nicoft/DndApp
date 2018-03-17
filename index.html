@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <label for="xpInput">set xp</label>
+  <input id="xpInput" type="number" value="0" class="character-input" data-inputname="xp"/>
+  <button id="xpButton">ok</button>
+  <p>xp: <span id="xp" class="character-output" data-outputname="xp"></span></p>
+
+  <hr/>
+
+  <label for="levelInput">set level</label>
+  <input id="levelInput" type="number" value="1" class="character-input" data-inputname="level"/>
+  <button id="levelButton">ok</button>
+  <p>level: <span id="level" class="character-output" data-outputname="level"></span></p>
+
+  <p>Proficiency Bonus: +<span id="prof" class="character-output" data-outputname="profBonus">0</span></p>
+
+  <hr />
+
+  <label for="classInput">Class: </label>
+  <select name="classInput" id="classInput" class="character-input" data-inputname="class">
+  </select>
+  <span id="class" class="character-output" data-outputname="class"></span>
+
+  <br />
+  <br />
+
+
+  <label for="raceDropdown">Race: </label>
+  <select name="raceDropdown" id="raceDropdown" class="character-input" data-inputname="race">
+  </select>
+  <span id="race" class="character-output" data-outputname="race"></span>
+  
+  |
+  <label for="subraceDropdown">Subrace: </label>
+  <select name="subraceDropdown" id="subraceDropdown" class="character-input" data-inputname="subrace">
+  </select>
+  <span id="subrace" class="character-output" data-outputname="subrace"></span>
+  
+  <br />
+  <br />
+  
+  <label for="alignmentInput">Alignment: </label>
+  <select name="alignmentInput" id="alignmentInput" class="character-input" data-inputname="alignment">
+  </select>
+  <span id="alignment" class="character-output" data-outputname="alignment"></span>
+
+  <br />
+  <br />
+
+  <span>Ability Scores</span>
+  <br />
+  <div class="character-input character-output" data-inputname="rawAbilityScores" data-outputname="abilityScores">
+    <label for="strInput">Strength: </label>
+    <input id="strInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="strModifier"></span>
+  <br />
+    <label for="dexInput">Dexterity: </label>
+    <input id="dexInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="dexModifier"></span>
+  <br />
+    <label for="contInput">Constitution: </label>
+    <input id="conInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="conModifier"></span>
+  <br />
+    <label for="intInput">Intelligence: </label>
+    <input id="intInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="intModifier"></span>
+  <br />
+    <label for="wisInput">Wisdom: </label>
+    <input id="wisInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="wisModifier"></span>
+  <br />
+    <label for="chaInput">Charisma: </label>
+    <input id="chaInput" type="number" class="rawAbilityScoreInput" value="10"/>
+    <span class="abilityOutput"></span>
+    <span class="modifierOutput" id="chaModifier"></span>
+  <br />
+  </div>
+
+  <button id="abilityScoreButton">ok</button>
+  
+  <br />
+  <p>Skills:</p>
+  <div id="skillsProf" class="character-input" data-inputname="skillsProf">
+  </div>
+  <div id="skills" class="character-output" data-outputname="skills">
+    <br />Acrobatics (dex): <span class="skillsOutput"></span>
+    <br />Animal Handling (wis): <span class="skillsOutput"></span>
+    <br />Arcana (int): <span class="skillsOutput"></span>
+    <br />Athletics (str): <span class="skillsOutput"></span>
+    <br />Deception (cha): <span class="skillsOutput"></span>
+    <br />History (int): <span class="skillsOutput"></span>
+    <br />Insight (wis): <span class="skillsOutput"></span>
+    <br />Intimidation (cha): <span class="skillsOutput"></span>
+    <br />Investigation (int): <span class="skillsOutput"></span>
+    <br />Medicine (wis): <span class="skillsOutput"></span>
+    <br />Nature (int): <span class="skillsOutput"></span>
+    <br />Perception (wis): <span class="skillsOutput"></span>
+    <br />Performance (cha): <span class="skillsOutput"></span>
+    <br />Persuasion (cha): <span class="skillsOutput"></span>
+    <br />Religion (int): <span class="skillsOutput"></span>
+    <br />Sleight of Hand (dex): <span class="skillsOutput"></span>
+    <br />Stealth (dex): <span class="skillsOutput"></span>
+    <br />Survival (wis): <span class="skillsOutput"></span>
+  </div>
+  <p>Passive Wisdom (Perception): <span id="passivePerception" class="character-output" data-outputname="passivePerception"></span></p>
+  <p>Saving Throws:</p>
+  <ul id="savingThrows" class="character-output caps" data-outputname="savingThrows"></ul>
+  <br />
+  <p>Initiative: <span id="initiative" class="character-output" data-outputname="initiative"></span></p>
+  <p>Hit Dice: <span id="hitDice" class="character-output" data-outputname="hitDice"></span></p>
+  <p>Maximum Hit Points: <span id="maxHp" class="character-output" data-outputname="maxHp"></span></p>
+  <p>Size: <span id="size" class="character-output" data-outputname="size"></span></p>
+  <hr/>
+  <p>Speed: <span id="speed" class="character-output" data-outputname="speed"></span></p>
+  <hr/>
+  <div id="inline-list">
+    <p>Languages:</p>
+    <span id="languages" class="character-output" data-outputname="languages"></span>
+  </div>
+  <hr/>
+  <p>Traits:</p>
+  <ul id="raceTraits" class="character-output" data-outputname="raceTraits"></ul>
+  <ul id="subraceTraits" class="character-output" data-outputname="subraceTraits"></ul>
+  <hr/>
+  <div id="inline-list">
+    <p>Tool Proficiency:</p>
+    <span id="tools" class="character-output" data-outputname="toolsProf"></span>
+  </div>
+  <hr/>
+  <div id="inline-list">
+    <p>Weapon Proficiency:</p>
+    <span id="weapon" class="character-output" data-outputname="weaponProf"></span>
+    <br />
+    <p>Armor Proficiency:</p>
+    <span id="armor" class="character-output" data-outputname="armorProf"></span>
+  </div>
+  
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+/* Styles go here */
+
+.hidden {
+  display:none;
+}
+
+.inline {
+  display:inline-block;
+}
+#inline-list p {
+  display: inline;
+}
+#inline-list span {
+  display:inline-block;
+}
+#inline-list span::first-letter {
+  text-transform: uppercase;
+}
+/* #inline-list ul, #inline-list li {*/
+/* display: inline-block;*/
+/* padding: 0;*/
+/* }*/
+/*#inline-list ul li::after {*/
+/* content: ", ";*/
+/* padding-right: 0.3em;*/
+/* }*/
+/*#inline-list ul li:first-child:first-letter {*/
+/* text-transform: uppercase;*/
+/* color: #F00;*/
+/* }*/
+/*#inline-list ul li:last-child:not(:only-child):before {*/
+/* content: "and ";*/
+/* }*/
+/*#inline-list ul li:last-child:after {*/
+/* content: ".";*/
+/* }*/
+.caps li span{
+    display:inline-block;
+}
+.caps li span::first-letter {
+  text-transform: uppercase;
+}
+li::first-letter {
+  text-transform: uppercase;
+}
